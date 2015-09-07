@@ -18,7 +18,7 @@ RUN yum install -y \
     https://www.softwarecollections.org/en/scls/rhscl/python33/epel-7-x86_64/download/rhscl-python33-epel-7-x86_64.noarch.rpm && \
     yum install -y --setopt=tsflags=nodocs --enablerepo=centosplus python33 python33-python-devel python33-python-setuptools epel-release && \
     yum install -y --setopt=tsflags=nodocs install nss_wrapper && \
-    yum install -y --setopt=tsflags=nodocs install openldap openldap-devel && \
+    yum install -y --setopt=tsflags=nodocs install openldap openldap-clients openldap-devel cyrus-sasl-lib python-devel && \
     yum clean all -y
 
 # Copy the S2I scripts from the specific language image to /usr/local/sti
